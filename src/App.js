@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
 import Images from "./Images";
 import Comments from "./Comments";
+import "./App.css";
 
 class App extends Component {
 	constructor(props) {
