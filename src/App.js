@@ -14,6 +14,7 @@ class App extends Component {
 		return (
 			<div className='container'>
 				<Router>
+					<h2>Salty is alive</h2>
 					<main>
 						<Header />,
 						<Images />,
