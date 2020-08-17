@@ -6,11 +6,14 @@ import Images from "./Images";
 import Comments from "./Comments";
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
 	render() {
 		return (
 			<div className='container'>
 				<Router>
-					<h1>Let's get Salty!</h1>
 					<main>
 						<Header />,
 						<Images />,
