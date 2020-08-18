@@ -4,13 +4,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from "./Header";
 import Images from "./Images";
 import Comments from "./Comments";
+import "./App.css";
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+		this.state = {};
+	}
 	render() {
 		return (
 			<div className='container'>
 				<Router>
-					<h1>Let's get Salty!</h1>
+					<h2>Salty is alive</h2>
 					<main>
 						<Header />,
 						<Images />,
