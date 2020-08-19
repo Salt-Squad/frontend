@@ -17,7 +17,10 @@ class Images extends Component {
 		return (
 			<div>
 				{this.state.images.map((image) => (
-					<h1>{image.name}</h1>
+					<div>
+						<h1>{image.name}</h1>
+						<img src={image.url} />
+					</div>
 				))}
 			</div>
 		);
