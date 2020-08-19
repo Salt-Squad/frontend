@@ -1,22 +1,20 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 class Images extends Component {
 	constructor() {
 		super();
-		this.state = {};
+		this.state = {
+			images: null,
+		};
 	}
-	componentDidMount() {}
-	handleChange = () => {
-		fetch()
-			.then((res) => res.json())
-			.then((res) => {
-				this.setState({});
-			})
-			.catch(console.error);
-	};
-	handleSubmit = (e) => {
-		e.preventDefault();
-	};
+componentDidMount = () => {
+	axios.get("/api/images").then(response => {
+		console.log(response);
+		// this.setState({
+		// 	images: response.data
+		// });
+	}); 
+};
 
 	render() {
 		return (
