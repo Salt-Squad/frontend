@@ -4,22 +4,21 @@ class Images extends Component {
 	constructor() {
 		super();
 		this.state = {
-			images: null,
+			images: [],
 		};
 	}
-componentDidMount = () => {
-	axios.get("/api/images").then(response => {
-		console.log(response);
-		// this.setState({
-		// 	images: response.data
-		// });
-	}); 
-};
-
+	componentDidMount = () => {
+		axios.get('/api/images').then((response) => {
+			console.log(response.data);
+			this.setState({ images: response.data });
+		});
+	};
 	render() {
 		return (
 			<div>
-				<p>The Images Component is standing by!</p>
+				{this.state.images.map((image) => (
+					<h1>{image.name}</h1>
+				))}
 			</div>
 		);
 	}
