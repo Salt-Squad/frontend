@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {API_URL} from "./config.js"
 
 class Delete extends Component {
 	constructor() {
@@ -10,7 +11,7 @@ class Delete extends Component {
 	}
 	delData = () => {
 		axios
-			.delete('http://localhost:3000/api/images/' + this.props.id)
+			.delete(API_URL + '/api/images/' + this.props.id)
 			.then((response) => {
 				window.location.reload();
 			});
@@ -22,7 +23,7 @@ class Delete extends Component {
 		e.preventDefault();
 		console.log(this.state);
 		axios
-			.put('/api/images/' + this.props.id, this.state)
+			.put(API_URL + '/api/images/' + this.props.id, this.state)
 			.then((response) => {
 				console.log(response);
 				window.location.reload();
