@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import {API_URL} from "./config.js"
 class Submit extends Component {
 	constructor() {
 		super();
@@ -14,7 +15,7 @@ class Submit extends Component {
 		e.preventDefault();
 		console.log(this.state);
 		axios
-			.post('/api/images/new', this.state)
+			.post(API_URL + '/api/images/new', this.state)
 			.then((response) => {
 				console.log(response);
 				window.location.reload();
