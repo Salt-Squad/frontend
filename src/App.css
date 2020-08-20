@@ -1,0 +1,65 @@
+body {
+	background: rgb(251, 250, 249);
+	background: linear-gradient(
+		270deg,
+		rgba(251, 250, 249, 1) 10%,
+		rgba(221, 186, 114, 0.6914556962025317) 38%,
+		rgba(235, 216, 177, 1) 66%,
+		rgba(251, 250, 249, 1) 100%
+	);
+}
+
+h1 {
+	text-align: center;
+	font-size: 250%;
+	font-family: 'Bangers', cursive, sans-serif;
+	color: white;
+	background: rgb(251, 250, 249);
+	background: linear-gradient(
+		270deg,
+		rgba(251, 250, 249, 1) 10%,
+		rgba(221, 186, 114, 0.69) 38%,
+		rgba(221, 186, 114, 0.69) 66%,
+		rgba(251, 250, 249, 1) 100%
+	);
+}
+
+h2 {
+  font-family: 'delius', cursive, sans-serif;
+}
+
+h3 {
+  margin: -20px 0 20px 0;
+	text-align: center;
+  font-size: 80%;
+  
+}
+
+img {
+	object-fit: cover;
+	width: 70%;
+	max-height: 100%;
+}
+
+.postContainer {
+  display: flex;
+  flex-direction: column;
+	justify-content: center;
+	margin: 0 0 0 20%;
+}
+
+.imageContainer {
+	display: flex;
+	justify-content: center;
+	margin: 0 0 0 25%;
+	flex-direction: column;
+}
+
+.dButton {
+	display: flex;
+	justify-content: center;
+	margin: 0px auto;
+	border-style: outset;
+	border-radius: 15%;
+	background: whitesmoke;
+}

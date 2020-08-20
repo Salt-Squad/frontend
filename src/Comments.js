@@ -25,21 +25,21 @@ class Comments extends Component {
 	};
 	render() {
 		return (
-			<div>
-				<p>Comment Below</p>
+			<div className="postContainer">
+				<p>Post your own image!</p>
 				<form className='commentForm' onSubmit={this.onSubmit}>
 					<input
 						type='text'
-						name='name'
+						placeholder='Title'
 						value={this.state.name} 
 						onChange={this.onChange}
 					 ></input>
 					<input
 						type='text'
-						name='url'
+						placeholder="Image URL"
 						value={this.state.url}
 						onChange={this.onChange}
-					/>
+					></input>
 					<button type='submit'>submit</button>
 				</form>
 			</div>

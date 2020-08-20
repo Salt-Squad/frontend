@@ -13,7 +13,8 @@ class App extends Component {
 	render() {
 		return (
 			<div className='container'>
-				<h2>A lil Bit Salty</h2>
+				<h1>🧂  Saltines 🧂 </h1>
+				<h3>Get a Lil bit Salty with bad food porn!</h3>
 				<Route exact path='/' component={Delete} />
 				<Route path='/api/images' component={Images} />
 				<Route path='/api/images' component={Comments} />
