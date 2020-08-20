@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Delete from './Delete';
 class Images extends Component {
 	constructor() {
 		super();
@@ -13,12 +14,15 @@ class Images extends Component {
 			this.setState({ images: response.data });
 		});
 	};
+
 	render() {
 		return (
-			<div>
+			<div className='imageContainer'>
 				{this.state.images.map((image) => (
-					<h1>{image.name}</h1>
+					<Delete name={image.name} url={image.url} id={image._id} /> 
+					
 				))}
+				
 			</div>
 		);
 	}
