@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import Delete from "./Delete";
 import Images from "./Images";
-import Comments from "./Comments";
+import Submit from "./Submit";
 import "./App.css";
 
 class App extends Component {
@@ -13,11 +13,11 @@ class App extends Component {
 	render() {
 		return (
 			<div className='container'>
-				<h1>🧂  Saltines 🧂 </h1>
+				<h1>🧂  A Lil Bit Salty 🧂 </h1>
 				<h3>Get a Lil bit Salty with bad food porn!</h3>
 				<Route exact path='/' component={Delete} />
 				<Route path='/api/images' component={Images} />
-				<Route path='/api/images' component={Comments} />
+				<Route path='/api/images' component={Submit} />
 			</div>
 		);
 	}
