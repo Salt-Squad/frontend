@@ -19,7 +19,7 @@ class Images extends Component {
 		return (
 			<div className='imageContainer'>
 				{this.state.images.map((image) => (
-					<p><Delete name={image.name} url={image.url} id={image._id} /> </p>
+					<Delete name={image.name} url={image.url} id={image._id} /> 
 					
 				))}
 				
