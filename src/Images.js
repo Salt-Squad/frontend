@@ -15,14 +15,13 @@ class Images extends Component {
 		});
 	};
 
+
 	render() {
 		return (
 			<div className='imageContainer'>
 				{this.state.images.map((image) => (
-					<Delete name={image.name} url={image.url} id={image._id} /> 
-					
+					<Delete name={image.name} url={image.url} id={image._id} />
 				))}
-				
 			</div>
 		);
 	}

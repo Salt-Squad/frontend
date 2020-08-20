@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-class Comments extends Component {
-	constructor(props) {
-		super(props);
+class Submit extends Component {
+	constructor() {
+		super();
 		this.state = {
 			name: '',
-			url: ' ',
 		};
 	}
 	onChange = (e) => {
@@ -26,27 +25,27 @@ class Comments extends Component {
 	};
 	render() {
 		return (
-			<div className="postContainer">
+			<div className='postContainer'>
 				<p>Post your own image!</p>
 				<form className='commentForm' onSubmit={this.onSubmit}>
 					<input
 						type='text'
-						name="name"
+						name='name'
 						placeholder='Title'
-						value={this.state.name} 
+						value={this.state.name}
 						onChange={this.onChange}
-					 />
+					/>
 					<input
 						type='text'
-						name="url"
-						placeholder="URL"
+						name='url'
+						placeholder='URL'
 						value={this.state.url}
 						onChange={this.onChange}
 					/>
-					<button type='submit'>submit</button>
+					<button type='submit'>Submit</button>
 				</form>
 			</div>
 		);
 	}
 }
-export default Comments;
+export default Submit;
