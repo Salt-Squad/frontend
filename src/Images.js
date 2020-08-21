@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Delete from './Delete';
+import Image from './Image';
 import {API_URL} from "./config.js"
 class Images extends Component {
 	constructor() {
@@ -21,7 +21,7 @@ class Images extends Component {
 		return (
 			<div className='imageContainer'>
 				{this.state.images.map((image) => (
-					<Delete name={image.name} url={image.url} id={image._id} />
+					<Image key={image._id} name={image.name} url={image.url} id={image._id} comments={image.comments}/>
 				))}
 			</div>
 		);

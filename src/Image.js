@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import {API_URL} from "./config.js"
+import Comments from "./Comments.js"
+import AddComment from './AddComment.js';
 
-class Delete extends Component {
+class Image extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -47,15 +49,18 @@ class Delete extends Component {
 						onChange={this.onChange}
 						value={this.state.name}
 					/>
-					<button className='eButton' onSubmit={this.onSubmit}>
+					<button className='eButton' type='submit' onSubmit={this.onSubmit}>
 						Edit
 					</button>
+					<button className='dButton' type='button' onClick={this.delData}>
+						Delete
+					</button>
 				</form>
-				<button className='dButton' onClick={this.delData}>
-					Delete
-				</button>
+				<AddComment imageId={this.props.id} />
+				<h4>Comments:</h4>
+				<Comments comments={this.props.comments} imageId={this.props.id} />
 			</div>
 		);
 	}
 }
-export default Delete;
+export default Image;
